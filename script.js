@@ -15,34 +15,6 @@ if (close) {
     })
 }  
 
-const dialog = document.querySelector("dialog");
-const showButton = document.querySelector("dialog + button");
-const closeButton = document.querySelector("dialog button");
-
-// "Show the dialog" button opens the dialog modally
-showButton.addEventListener("click", () => {
-  
-});
-
-// "Close" button closes the dialog
-closeButton.addEventListener("click", () => {
-  dialog.close();
-});
-
-
-const cart = document.getElementsByClassName("cart");
-
-for (let index = 0; index < cart.length; index++) {
-    let element = cart[index]
-    element.onclick = ()=>{
-        // document.querySelector('.dialog-box').style.display = 'flex';
-        dialog.showModal();
-        proset = window.localStorage.getItem("cartProSet");
-        proset.add(index+1)
-        window.localStorage.setItem("cartProSet", proset);
-    }
-};
-
 const products = document.getElementsByClassName("pro");
 
 for (let index = 0; index < products.length; index++) {
